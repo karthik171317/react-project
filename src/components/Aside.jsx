@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import menu from '../assets/svg/menu.svg'
 
@@ -7,11 +7,18 @@ function Aside(props){
     const getCurrentRoute = useLocation();
     const [data, setData] = useState(false);
 
+    useEffect(()=>{
+        if(window.innerWidth < 768 && data == false){
+            document.getElementsByClassName('asideMain')[0].style.display = 'none';
+            setData(true)
+        }
+    })
+
     return (
         <>
-            <aside className={className + ' bg-gray-200'}>
+            <aside className={className + ' bg-gray-200 asideMain'}>
                 <div className="text-[34px] flex md:justify-center border-b cursor-default appTitle border-r justify-between">
-                    <span className='cursor-pointer p-2 asideIcon hidden' onClick={()=> {dataSend(!data);} }>  
+                    <span className='cursor-pointer p-2 asideIcon hidden' onClick={()=> {dataSend(parentComp => !parentComp);} }>  
                         <img src={menu} alt="" />
                     </span>
                     React App
