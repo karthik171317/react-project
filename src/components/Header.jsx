@@ -8,7 +8,7 @@ function Header ({dataSend ,titleNameValue}){
     const [data, setData] = useState(false);
     return (<header className='top-0 sticky bg-black text-white h-[7%]'>
                 <h1 className="text-3xl flex justify-between px-5 py-4 items-center cursor-default h-full">
-                    <span className='cursor-pointer' onClick={()=> {setData(!data);dataSend(data);document.getElementsByClassName('asideMain')[0].style.display = '';} }>  
+                    <span className='cursor-pointer' onClick={()=> {setData(!data);dataSend(!data);document.getElementsByClassName('asideMain')[0].style.display = '';} }>  
                         <img src={menu} alt="" />
                     </span>
                     <span>    
