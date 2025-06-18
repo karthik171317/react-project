@@ -15,7 +15,6 @@ import {
 function App() {
     const [parentComp, childComp] = useState(false);
     const [titleName, titleNameFunc] = useState('Time');
-    debugger
     return (
         <>
         <Router>

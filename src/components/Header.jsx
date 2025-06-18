@@ -3,7 +3,6 @@ import {useState} from 'react';
 
 
 function Header ({dataSend ,titleNameValue}){
-    debugger
     // const [titleName, titleNameFunc] = useState('Time')
     const [data, setData] = useState(false);
     return (<header className='top-0 sticky bg-black text-white h-[7%]'>
