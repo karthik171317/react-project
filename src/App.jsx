@@ -53,7 +53,7 @@ function App() {
                     />
                     <Route
                         path="*"
-                        element={<Navigate to="/time" />}
+                        element={<Navigate to="/" />}
                     />
                 </Routes>
             </Router>
